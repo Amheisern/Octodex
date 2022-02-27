@@ -61,11 +61,10 @@ main section {
   padding-right: 16px;
   padding-left: 16px;
   box-sizing: border-box;
-}
-main section {
   display: flex;
   flex-wrap: wrap;
 }
+
 main section article img {
   display: inline-flex;
   display: block;
