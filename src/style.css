@@ -16,6 +16,7 @@ body {
 }
 header {
   display: flex;
+  justify-content: space-between;
   align-items: baseline;
   box-sizing: border-box;
   margin-right: auto;
@@ -30,40 +31,27 @@ header {
   border-bottom: 1px solid rgba(0, 0, 0, 0.15);
   box-shadow: 0 0.5rem 1.25rem rgba(0, 0, 0, 0.05);
 }
+.TwoHeader {
+  padding-right: 20px;
+}
 header :first-child {
-  /* color: #586069; */
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-self: center;
   padding-left: 2px;
 }
-header :nth-child(2) {
-  background-color: transparent;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-}
+
 header nav ul li {
   display: flex;
   flex-direction: row;
   align-items: center;
   padding-top: 0px;
+  padding-right: 5px;
   list-style: none;
 }
-header nav ul li a {
-  color: #586069;
-  align-items: center;
-}
-header nav ul li:not(:first-child) {
-  padding-top: 16px;
-}
-.back {
-  padding-bottom: 18px;
-}
-.backlink {
-  content: 'Back';
+.octo {
+  font-weight: bold;
 }
 /* Header-------------------------------------- */
 
@@ -82,7 +70,7 @@ main section article img {
   display: inline-flex;
   display: block;
   border: 1px #e1e4e8 solid;
-  border-radius: 3px;
+  border-radius: 6px;
   background-color: #fff;
   margin-bottom: 8px;
   padding: 8px;
@@ -130,4 +118,45 @@ a:link {
 a:visited {
   text-decoration: none;
   color: black;
+}
+/* --------------------------responsive section -------------------- */
+@media (width > 850px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+  }
+  .TwoHeader {
+    padding-right: 20px;
+  }
+  header :first-child {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-self: center;
+    font-size: 16px;
+  }
+
+  header nav ul li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-top: 0px;
+    padding-right: 5px;
+    list-style: none;
+  }
+  .twitter {
+    content: 'Follow Us on Twitter';
+  }
+  header nav {
+    padding-right: 16px;
+    display: flex;
+    align-items: center;
+  }
+  header nav ul li:first-child {
+    padding-right: 16px;
+  }
+  main section article {
+    padding-right: 16px !important;
+    padding-left: 16px !important;
+  }
 }
