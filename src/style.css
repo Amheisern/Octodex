@@ -34,7 +34,7 @@ header {
 .TwoHeader {
   padding-right: 20px;
 }
-header :first-child {
+header nav:first-child {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -42,13 +42,18 @@ header :first-child {
   padding-left: 2px;
 }
 
-header nav ul li {
+header nav ul {
   display: flex;
+  justify-content: flex-start;
   flex-direction: row;
   align-items: center;
   padding-top: 0px;
   padding-right: 5px;
   list-style: none;
+  padding-left: 0px;
+}
+header nav ul li:not(:first-child) {
+  margin-left: 10px;
 }
 .octo {
   font-weight: bold;
@@ -108,6 +113,10 @@ main section article ul li a {
   font-weight: 500;
   letter-spacing: -0.025em;
   text-decoration: none;
+}
+
+main section article ul li:last-child {
+  margin-left: auto;
 }
 a:link {
   text-decoration: none;
